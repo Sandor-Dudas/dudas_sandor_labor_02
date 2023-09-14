@@ -1,2 +1,1 @@
-print('Üdv a fedélzeten')
-print('Üdv a fedélzeten')
+print('Üv a fedélzeten')
