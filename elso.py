@@ -11,3 +11,6 @@ print('''Ez
 most
 több sorba kerül
 ''')
+
+nev="pali"
+print(f'szia {nev}')
