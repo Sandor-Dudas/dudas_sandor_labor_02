@@ -13,4 +13,9 @@ több sorba kerül
 ''')
 
 nev="pali"
-print(f'szia {nev}')
+print(f'szia {nev}!')
+print("hahó {0}!".format('nev'))
+
+nev= input('hogy hívnak?')
+print(f'szia {nev}!')
+print("hahó {0}!".format('nev'))
