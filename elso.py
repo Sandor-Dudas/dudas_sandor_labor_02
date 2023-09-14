@@ -1,3 +1,2 @@
 print('Üdv!')
-print('Üdv!')
-print('Üdv!')
+print('szia','szia béla')
