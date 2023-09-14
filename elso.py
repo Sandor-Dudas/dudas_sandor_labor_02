@@ -1,1 +1,1 @@
-print('Üv a fedélzeten')
+print('Üdv!')
