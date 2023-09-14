@@ -1,2 +1,2 @@
 print('Üdv!')
-print('szia','szia béla')
+print('szia', 'Béla',sep="-")
