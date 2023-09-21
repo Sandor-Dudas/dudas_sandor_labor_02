@@ -1,7 +1,8 @@
 #jövedelemszámítás
 print("jövedelemszámítás\n")
 kor = int(input("Hány éves vagy?"))
-gyerek = input("Van 3 gyereked és nő vagy (igen/nem)?")
+if kor > 25:
+    gyerek = input("Van 3 gyereked és nő vagy (igen/nem)?")
 
 brutto = int(input("Mennyi a bruttód"))
 if kor <= 25 or gyerek in ["igen", "Igen", "i", "I"]:
