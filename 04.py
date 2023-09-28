@@ -15,7 +15,7 @@ def adatkeres(tipus):
             muvelet = input("Kérem a műveleti jelet (+,-,/,*)")
     return valasz
 
-def muvelet_vegrehalytasa():
+def muvelet_vegrehajtasa():
     eredmeny = 0
     if muvelet == "+":
         eredmeny = szam1 + szam2
@@ -33,7 +33,7 @@ szam1 = adatkeres("sz")
 muvelet = adatkeres("m")
 szam2 = adatkeres("sz")
 
-muvelet_vegrehalytasa()
+vegeredmeny = muvelet_vegrehajtasa()
 
 print(str(szam1).rjust(50))
 print(muvelet, end="")
