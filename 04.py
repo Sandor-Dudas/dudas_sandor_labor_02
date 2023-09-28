@@ -7,3 +7,5 @@ while not szam1.isnumberic():
     print("Rossz érték!!!")
     szam1 = input("Kérek egy számot: ")
 szam1 = int(szam1)
+
+muvelet =input("Kérem a műveleti jelet (x,-,/,*)")
