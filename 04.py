@@ -2,5 +2,8 @@
 
 print("Számológép")
 
-szam1 = int(input("Kérek egy számot: "))
-while szam1.isnumberic():
+szam1 = input("Kérek egy számot: ")
+while not szam1.isnumberic():
+    print("Rossz érték!!!")
+    szam1 = input("Kérek egy számot: ")
+szam1 = int(szam1)
