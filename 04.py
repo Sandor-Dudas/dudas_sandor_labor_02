@@ -32,3 +32,5 @@ elif muvelet == "/":
 print(str(szam1).rjust(50))
 print(muvelet, end="")
 print(str(szam2).rjust(49))
+print("".rjust(50, "_"))
+print(str(eredmeny).rjust(50))
