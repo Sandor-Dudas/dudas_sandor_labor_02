@@ -25,9 +25,7 @@ def muvelet_vegrehalytasa():
         eredmeny = szam1 * szam2
     elif muvelet == "/":
         eredmeny = szam1 / szam2
-
-
-muvelet()
+    return eredmeny
 
 # A program eleje
 print("Számológép")
@@ -35,6 +33,7 @@ szam1 = adatkeres("sz")
 muvelet = adatkeres("m")
 szam2 = adatkeres("sz")
 
+muvelet_vegrehalytasa()
 
 print(str(szam1).rjust(50))
 print(muvelet, end="")
