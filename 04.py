@@ -1,4 +1,4 @@
-#szamologep
+#számologép
 
 print("Számológép")
 
@@ -29,3 +29,6 @@ elif muvelet == "*":
 elif muvelet == "/":
     eredmeny = szam1 / szam2
 
+print(str(szam1).rjust(50))
+print(muvelet, end="")
+print(str(szam2).rjust(49))
