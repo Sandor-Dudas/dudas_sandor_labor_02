@@ -1,12 +1,13 @@
 #számologép
-
 print("Számológép")
 
-szam1 = input("Kérek egy számot: ")
-while not szam1.isnumeric():
-    print("Rossz érték!!!")
+def adatkeres():
     szam1 = input("Kérek egy számot: ")
-szam1 = int(szam1)
+    while not szam1.isnumeric():
+        print("Rossz érték!!!")
+        szam1 = input("Kérek egy számot: ")
+    szam1 = int(szam1)
+    return
 
 muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
 while muvelet not in ["+", "-", "*", "/"]:
