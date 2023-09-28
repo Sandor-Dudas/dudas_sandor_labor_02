@@ -3,7 +3,7 @@
 print("Számológép")
 
 szam1 = input("Kérek egy számot: ")
-while not szam1.isnumberic():
+while not szam1.isnumeric():
     print("Rossz érték!!!")
     szam1 = input("Kérek egy számot: ")
 szam1 = int(szam1)
@@ -14,7 +14,7 @@ while muvelet not in ["+", "-", "*", "/"]:
     muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
 
 szam2 = input("Kérek egy számot: ")
-while not szam2.isnumberic():
+while not szam2.isnumeric():
     print("Rossz érték!!!")
     szam1 = input("Kérek egy számot: ")
 szam2 = int(szam2)
