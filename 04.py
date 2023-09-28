@@ -1,6 +1,6 @@
 #számologép
 print("Számológép")
-def adatkeres():
+def adatkeres(tipus):
     szam = input("Kérek egy számot: ")
     while not szam.isnumeric():
         print("Rossz érték!!!")
@@ -11,12 +11,12 @@ def adatkeres():
 
 # A program eleje
 print("Számológép")
-szam1 = adatkeres()
+szam1 = adatkeres("sz")
 muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
 while muvelet not in ["+", "-", "*", "/"]:
     print("Nem érvényes műveleti jel!!!")
     muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
-szam2 = adatkeres()
+szam2 = adatkeres("sz")
 
 eredmeny = 0
 if muvelet == "+":
