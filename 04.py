@@ -18,5 +18,14 @@ while not szam2.isnumberic():
     print("Rossz érték!!!")
     szam1 = input("Kérek egy számot: ")
 szam2 = int(szam2)
+
+eredmeny = 0
 if muvelet == "+":
     eredmeny = szam1 + szam2
+elif muvelet == "-":
+    eredmeny = szam1 - szam2
+elif muvelet == "*":
+    eredmeny = szam1 * szam2
+elif muvelet == "/":
+    eredmeny = szam1 / szam2
+
