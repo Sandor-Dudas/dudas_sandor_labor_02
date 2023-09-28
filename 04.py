@@ -9,6 +9,7 @@ def adatkeres():
     szam1 = int(szam1)
     return
 
+# A program eleje
 muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
 while muvelet not in ["+", "-", "*", "/"]:
     print("Nem érvényes műveleti jel!!!")
