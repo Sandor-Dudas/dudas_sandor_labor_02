@@ -1,25 +1,22 @@
 #számologép
 print("Számológép")
-
 def adatkeres():
-    szam1 = input("Kérek egy számot: ")
-    while not szam1.isnumeric():
+    szam = input("Kérek egy számot: ")
+    while not szam.isnumeric():
         print("Rossz érték!!!")
-        szam1 = input("Kérek egy számot: ")
-    szam1 = int(szam1)
-    return
+        szam = input("Kérek egy számot: ")
+    szam = int(szam)
+    return szam
+
 
 # A program eleje
+print("Számológép")
+szam1 = adatkeres()
 muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
 while muvelet not in ["+", "-", "*", "/"]:
     print("Nem érvényes műveleti jel!!!")
     muvelet =input("Kérem a műveleti jelet (+,-,/,*)")
-
-szam2 = input("Kérek egy számot: ")
-while not szam2.isnumeric():
-    print("Rossz érték!!!")
-    szam1 = input("Kérek egy számot: ")
-szam2 = int(szam2)
+szam2 = adatkeres()
 
 eredmeny = 0
 if muvelet == "+":
