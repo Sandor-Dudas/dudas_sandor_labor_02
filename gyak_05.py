@@ -19,20 +19,22 @@ def felhasznalonev():
 def jelszo_kerese():
     felhasznalo_jelszo = input("Kérek egy jeszót (1,a,A, min 8 karakter):")
     ok_jelszo = True
-    szamjegy = 0
     while ok_jelszo:
         if len(felhasznalo_jelszo) < 8:
             ok_jelszo = False
+
+            szamjegy = 0
         for i in range(len(felhasznalo_jelszo)):
-            if not felhasznalo_jelszo[i].isnumeric():
+            if felhasznalo_jelszo[i].isnumeric():
                 szamjegy += 1
         if szamjegy == 0:
                ok_jelszo = False
+
         if not ok_jelszo:
             felhasznalo_jelszo = input("Nem megfelelő a jelszó!!!\nKérek egy jeszót (1,a,A, min 8 karakter):")
             ok_jelszo = True
         else:
-            ok_jelszo= False
+            ok_jelszo = False
 def jelszo_ellenorzese():
     ok_jelszo = True
     return ok_jelszo
