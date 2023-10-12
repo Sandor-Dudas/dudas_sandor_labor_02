@@ -1,6 +1,8 @@
 # Beléptetőrendszer
 def regisztracio():
     ok_regisztracio = True
+    felhasznalo_email = felhasznalonev()
+    felhasznalo_jelszo = jelszo_kerese()
     felhasznalonev()
     jelszo_kerese()
     ciklus = 1
@@ -15,6 +17,7 @@ def felhasznalonev():
     felhasznalo_email =input("Kérem az email címét: ")
     while " " in felhasznalo_email or "@" not in felhasznalo_email or "." not in felhasznalo_email :
         felhasznalo_email = input("Nem jó az email!!!\nKérem az email címét: ")
+        return felhasznalo_email
 
 def jelszo_kerese():
     felhasznalo_jelszo = input("Kérek egy jeszót (1,a,A, min 8 karakter):")
@@ -49,8 +52,13 @@ def jelszo_kerese():
             ok_jelszo = True
         else:
             ok_jelszo = False
-def jelszo_ellenorzese():
-    ok_jelszo = True
+    return felhasznalo_jelszo
+def jelszo_ellenorzese(felhasznalo_jelszo):
+    jelszo2 = input("kerem ismet a jelszot")
+    if jelszo2 == felhasznalo_jelszo:
+        ok_jelszo = True
+    else:
+        ok_jelszo = False
     return ok_jelszo
 
 def beleptetes():
@@ -58,8 +66,10 @@ def beleptetes():
 
 
 #Innen indul a program
-felhasznalo_email = ""
-felhasznalo_jelszo = ""
-jelszo_kerese()
+
+
 if regisztracio():
+    print("Sikerült a regisztráció, most beléptetjük/")
     beleptetes()
+else:
+    print("Sajnos nem sikerült a regisztráció! /nPróbálja újra!")
