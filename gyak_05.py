@@ -4,10 +4,13 @@ def regisztracio():
     felhasznalo_email = felhasznalonev()
     felhasznalo_jelszo = jelszo_kerese()
 
-    if jelszo_ellenorzese(felhasznalo_jelszo, 3):
-        ok_regisztracio = True
-    else:
+    if not jelszo_ellenorzese(felhasznalo_jelszo, 3):
         ok_regisztracio = False
+
+        if ok_regisztracio
+            with open("jelszo.txt", "a", encoding="utf-8") as fajl:
+                fajl.write(felhasznalo_email + ";" + felhasznalo_jelszo +"\n" )
+
     return ok_regisztracio
 
 def felhasznalonev():
@@ -50,8 +53,12 @@ def jelszo_kerese():
         else:
             ok_jelszo = False
     return felhasznalo_jelszo
-def jelszo_ellenorzese(felhasznalo_jelszo):
+def jelszo_ellenorzese(felhasznalo_jelszo,probalkozas):
+    i = 1
     jelszo2 = input("kerem ismet a jelszot")
+    while jelszo2 != felhasznalo_jelszo and i < probalkozas:
+        jelszo2 = input("kerem ismet a jelszot")
+        i += 1
     if jelszo2 == felhasznalo_jelszo:
         ok_jelszo = True
     else:
