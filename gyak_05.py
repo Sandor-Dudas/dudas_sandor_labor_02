@@ -38,7 +38,7 @@ def jelszo_ellenorzese():
     return ok_jelszo
 
 def beleptetes():
-    passs
+    pass
 
 
 #Innen indul a program
