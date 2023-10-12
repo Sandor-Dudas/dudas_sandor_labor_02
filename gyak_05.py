@@ -23,12 +23,26 @@ def jelszo_kerese():
         if len(felhasznalo_jelszo) < 8:
             ok_jelszo = False
 
-            szamjegy = 0
+            van = 0
         for i in range(len(felhasznalo_jelszo)):
             if felhasznalo_jelszo[i].isnumeric():
-                szamjegy += 1
-        if szamjegy == 0:
+                van += 1
+        if van == 0:
                ok_jelszo = False
+
+        van = 0
+        for i in range(len(felhasznalo_jelszo)):
+            if felhasznalo_jelszo[i].isupper():
+                van += 1
+        if van == 0:
+            ok_jelszo = False
+
+            van = 0
+            for i in range(len(felhasznalo_jelszo)):
+                if felhasznalo_jelszo[i].islower():
+                    van += 1
+            if van == 0:
+                ok_jelszo = False
 
         if not ok_jelszo:
             felhasznalo_jelszo = input("Nem megfelelő a jelszó!!!\nKérek egy jeszót (1,a,A, min 8 karakter):")
