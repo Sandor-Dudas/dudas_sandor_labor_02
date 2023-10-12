@@ -3,14 +3,11 @@ def regisztracio():
     ok_regisztracio = True
     felhasznalo_email = felhasznalonev()
     felhasznalo_jelszo = jelszo_kerese()
-    felhasznalonev()
-    jelszo_kerese()
-    ciklus = 1
-    while not jelszo_ellenorzese():
-        ciklus += 1
-        if ciklus > 3:
-            ok_regisztracio = False
-            break
+
+    if jelszo_ellenorzese(felhasznalo_jelszo, 3):
+        ok_regisztracio = True
+    else:
+        ok_regisztracio = False
     return ok_regisztracio
 
 def felhasznalonev():
