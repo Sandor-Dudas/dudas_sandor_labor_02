@@ -65,9 +65,17 @@ def jelszo_ellenorzese(felhasznalo_jelszo, probalkozas, uzenet):
         ok_jelszo = False
     return ok_jelszo
 
-def beleptetes():
-    pass
+def felhasznalo_ellenorzese(felhasznalo):
+    jelszo = ""
+    with open("jelszo.txt", "r", encoding="utf-8") as fajl:
+        for sor in fajl:
+            print(sor)
+        return jelszo
 
+def beleptetes():
+    ok_belepes = True
+    pass
+    return ok_belepes
 
 #Innen indul a program
 
