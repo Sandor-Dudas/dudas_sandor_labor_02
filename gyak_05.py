@@ -69,12 +69,22 @@ def felhasznalo_ellenorzese(felhasznalo):
     jelszo = ""
     with open("jelszo.txt", "r", encoding="utf-8") as fajl:
         for sor in fajl:
-            print(sor)
+            lista =sor.string()
+            user = lista.split(";")
+            if user[0] == felhasznalo:
+                jelszo = user[1]
         return jelszo
 
 def beleptetes():
     ok_belepes = True
-    pass
+    jelszo = felhasznalo_ellenorzese(felhasznalonev())
+    if jelszo == "":
+        print("Nnincs ilxen felhasznaló, regisztrájl!")
+        ok_belepes = False
+    else:
+        if not jelszo_ellenorzese(jelszo, 3, "Kérem a jelszót: "):
+            print("Nem megfelelő a jelszó!")
+            ok_belepes = False
     return ok_belepes
 
 #Innen indul a program
@@ -82,6 +92,9 @@ def beleptetes():
 if __name__ == "__main__":
     if regisztracio():
         print("Sikerült a regisztráció, most beléptetjük/")
-        beleptetes()
+        if beleptetes():
+            print("Üdv a feldélzeten")
+        else:
+            print("sikertelen belépés!")
     else:
         print("Sajnos nem sikerült a regisztráció! /nPróbálja újra!")
