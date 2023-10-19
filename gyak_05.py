@@ -79,9 +79,9 @@ def beleptetes():
 
 #Innen indul a program
 
-
-if regisztracio():
-    print("Sikerült a regisztráció, most beléptetjük/")
-    beleptetes()
-else:
-    print("Sajnos nem sikerült a regisztráció! /nPróbálja újra!")
+if __name__ == "__main__":
+    if regisztracio():
+        print("Sikerült a regisztráció, most beléptetjük/")
+        beleptetes()
+    else:
+        print("Sajnos nem sikerült a regisztráció! /nPróbálja újra!")
