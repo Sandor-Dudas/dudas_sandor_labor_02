@@ -2,6 +2,7 @@
 def regisztracio():
     ok_regisztracio = True
     felhasznalo_email = felhasznalonev()
+    #jelszo automatikus generalasa
     felhasznalo_jelszo = jelszo_kerese()
 
     if not jelszo_ellenorzese(felhasznalo_jelszo, 3,"kerem ismet a jelszot"):
@@ -88,7 +89,6 @@ def beleptetes():
     return ok_belepes
 
 #Innen indul a program
-
 if __name__ == "__main__":
     if regisztracio():
         print("Sikerült a regisztráció, most beléptetjük/")
