@@ -1,4 +1,7 @@
 # Beléptetőrendszer
+import string
+
+
 def regisztracio():
     ok_regisztracio = True
     felhasznalo_email = felhasznalonev()
@@ -80,13 +83,28 @@ def beleptetes():
     ok_belepes = True
     jelszo = felhasznalo_ellenorzese(felhasznalonev())
     if jelszo == "":
-        print("Nnincs ilxen felhasznaló, regisztrájl!")
+        print("Nnincs ilyen felhasznaló, regisztrájl!")
         ok_belepes = False
     else:
         if not jelszo_ellenorzese(jelszo, 3, "Kérem a jelszót: "):
             print("Nem megfelelő a jelszó!")
             ok_belepes = False
     return ok_belepes
+
+def jelszo_generalasa(hossz, kisbetu, nagybetu, szam):
+    import srtring
+    import random
+    jelszo = ""
+    karaktersor = ""
+    if kisbetu:
+        karaktersor = karaktersor + string.ascii_lowercase
+    if nagybetu:
+        karaktersor = karaktersor + string.ascii_uppercase
+    if szam:
+        karaktersor = karaktersor + string.digits
+    for _ in range(hossz):
+        jelszo = jelszo + karaktersor[random.randint(0, len(karaktersor)-1)]
+    return jelszo
 
 #Innen indul a program
 if __name__ == "__main__":
