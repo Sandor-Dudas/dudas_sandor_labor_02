@@ -92,7 +92,7 @@ def beleptetes():
     return ok_belepes
 
 def jelszo_generalasa(hossz, kisbetu, nagybetu, szam):
-    import srtring
+    import string
     import random
     jelszo = ""
     karaktersor = ""
