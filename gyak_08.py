@@ -48,7 +48,7 @@ def reg_ablak():
     felh_jelszo2 = Entry(regisztracio, width=20)
 
     gomb_ok = Button(regisztracio, text="OK", command=ok_gomb_kezelese)
-    gomb_jelszo = Button(regisztracio, text="jelszo", command=jelszo_gomb_kezelese)
+    gomb_jelszo = Button(regisztracio, text="jelszo generalasa", command=jelszo_gomb_kezelese)
 
     felh_nev_cimke.grid(row=0, column=0)
     felh_jelszo_cimke.grid(row=1, column=0)
