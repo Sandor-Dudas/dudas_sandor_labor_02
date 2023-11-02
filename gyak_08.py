@@ -61,5 +61,5 @@ def reg_ablak():
 
     regisztracio.mainloop()
 
-#belepes_ablak()
+belepes_ablak()
 reg_ablak()
