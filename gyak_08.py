@@ -1,5 +1,7 @@
 from tkinter import *
 
+import gyak_09
+
 
 def belepes_ablak():
     def ok_gomb_kezelese():
@@ -33,8 +35,11 @@ def reg_ablak():
     def ok_gomb_kezelese():
         regisztracio.destroy()
 
-    def reg_gomb_kezelese():
-        regisztracio.destroy()
+    def jelszo_gomb_kezelese():
+        pw.jelszo_generalasa()
+        print(pw.jelszo)
+
+    pw = gyak_09.Jelszo()
 
     regisztracio = Tk()
     regisztracio.title("Regisztráció")
